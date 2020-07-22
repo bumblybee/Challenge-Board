@@ -21,7 +21,7 @@ const formattedDate = () => {
 // -------- Get data from API and handle ----------
 
 const getQuestions = async (questionId) => {
-  const res = await fetch(`http://localhost:3000/challenges/${questionId}`);
+  const res = await fetch(`http://localhost:3000/questions/${questionId}`);
   const questions = await res.json();
   console.log(questions);
   return questions;
