@@ -21,14 +21,16 @@ const formattedDate = () => {
 // -------- Get data from API and handle ----------
 
 const getQuestions = async (questionId) => {
-  const res = await fetch(`http://localhost:3000/questions/${questionId}`);
+  const res = await fetch(
+    `https://salty-anchorage-50289.herokuapp.com/questions/${questionId}`
+  );
   const questions = await res.json();
   console.log(questions);
   return questions;
 };
 
 const handleGetQuestions = () => {
-  getQuestions().then((questions) => {
+  getQuestions(10).then((questions) => {
     renderQuestions(questions);
     allQuestions = [...questions];
   });
