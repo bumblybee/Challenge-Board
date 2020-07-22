@@ -68,6 +68,8 @@ i {
 
 i:hover {
   color: var(--primary-text);
+
+  cursor: pointer;
 }
 
 .modal {
@@ -149,20 +151,19 @@ i:hover {
   border-radius: 50%;
 }
 
+.fa-chess-knight:hover {
+  background: var(--primary-text);
+  color: var(--secondary-background);
+}
+
 .user-menu {
   z-index: 10;
   display: none;
 }
 
 .container {
-  /* height: 900px;
-  margin: 0 auto;
-  padding: 3rem;
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  grid-gap: 1rem; */
-  width: 95%;
-  margin: 2rem auto 0;
+  width: 80%;
+  margin: 3rem auto;
   display: flex;
   height: 900px;
   align-items: stretch;
@@ -174,25 +175,20 @@ i:hover {
 }
 
 .challenge-submission-area {
-  max-height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .challenge-container,
 .submission-container {
-  flex-grow: 2;
   background: var(--secondary-background);
-  padding: 2.3rem;
+  padding: 3rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035);
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.05),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.06), 0 12.5px 10px rgba(0, 0, 0, 0.07);
   margin-right: 1rem;
-  max-height: 100%;
-}
-
-.submission-container,
-.discussion-area {
-  margin-bottom: 2rem;
 }
 
 .challenge-container {
@@ -201,13 +197,16 @@ i:hover {
 
 .challenge-header h1 {
   color: var(--primary-text);
-  margin-bottom: 1.5rem;
 }
 
 iframe {
   margin: 1.5rem 0;
   width: 100%;
   height: 400px;
+}
+
+.submission-container {
+  flex-grow: 1;
 }
 
 .discussion-area {
@@ -325,7 +324,7 @@ iframe {
 @media all and (max-width: 1250px) {
   /* Do calc here to compensate for height of challenge description text */
   iframe {
-    height: 383px;
+    height: 300px;
   }
 }
 
@@ -333,7 +332,7 @@ iframe {
   .container {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 85%;
   }
 
   .submission-container,
