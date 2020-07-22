@@ -1,0 +1,355 @@
+/* Todo: Figure out challenge side resize*/
+/* Todo: Media queries for modal */
+/*TODO: Style scroll bar */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap");
+
+:root {
+  --primary-background: #202225;
+  --secondary-background: #2f3136;
+  --card-background: #3a3c42;
+  --title-text: #809bff;
+  --primary-text: #fff;
+  --secondary-text: #dcddde;
+  --tertiary-text: #7d8088;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #202225;
+  color: var(--primary-text);
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: var(--title-text);
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+}
+
+button {
+  margin-top: 1rem;
+  background: #6271c0;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #809bff;
+}
+
+i {
+  color: var(--secondary-text);
+}
+
+i:hover {
+  color: var(--primary-text);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.modal-content {
+  background: var(--secondary-background);
+  width: 30%;
+  margin: 15% auto;
+  padding: 2rem;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    0 100px 80px rgba(0, 0, 0, 0.07);
+  border-radius: 6px;
+}
+
+.modal-header {
+  padding: 1rem 1rem 0;
+}
+
+.modal-body {
+  padding: 1rem;
+}
+
+.modal-body form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-body input,
+.modal-body textarea {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(128, 127, 127, 0.2);
+  border-radius: 6px;
+  background: #18191b;
+  color: var(--primary-text);
+  font-size: 1rem;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.modal-footer a {
+  color: var(--primary-text);
+  margin: 0 1.5rem 0.5rem 0;
+}
+
+.nav {
+  background: var(--secondary-background);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.nav h3 {
+  color: #6271c0;
+  letter-spacing: 0.15rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.fa-chess-knight {
+  color: var(--secondary-background);
+  background: var(--secondary-text);
+  padding: 8px 8px;
+  border-radius: 50%;
+}
+
+.user-menu {
+  z-index: 10;
+  display: none;
+}
+
+.container {
+  height: 100%;
+  margin: 0 auto;
+  padding: 3rem;
+  /* display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-gap: 1rem; */
+  display: flex;
+  box-sizing: content-box;
+}
+
+.heading {
+  font-weight: lighter;
+  color: var(--secondary-text);
+}
+
+.challenge-submission-area {
+  max-height: 100%;
+  margin-right: 1rem;
+}
+
+.challenge-container,
+.submission-container {
+  background: var(--secondary-background);
+  padding: 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035);
+  max-height: 100%;
+}
+
+.challenge-container {
+  margin-bottom: 1rem;
+}
+
+.challenge-header h1 {
+  color: var(--primary-text);
+  margin-bottom: 1.5rem;
+}
+
+.challenge-video-area {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  margin-bottom: 1rem;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.discussion-area {
+  background: var(--secondary-background);
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035);
+  display: flex;
+  flex-direction: column;
+}
+
+.discussion-header-container {
+  display: flex;
+  margin-bottom: 1rem;
+  padding: 3rem 2rem 0;
+}
+
+.discussion-header-container button {
+  margin-top: auto;
+  margin-left: auto;
+}
+
+.questions-container {
+  overflow: auto;
+  height: 100%;
+}
+
+.questions-thread::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.questions-thread {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.question-card {
+  margin: 0.5rem 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  background: var(--card-background);
+  flex-shrink: 0;
+  /* max-height: 100%; */
+}
+
+.question-header {
+  display: flex;
+  font-size: 0.9rem;
+}
+
+.name {
+  margin-right: 1rem;
+  font-weight: lighter;
+  color: var(--secondary-text);
+}
+
+.created-at {
+  color: var(--tertiary-text);
+}
+
+.fa-bookmark {
+  margin-left: auto;
+}
+
+.question-body {
+  padding: 0.5rem 0;
+}
+
+.question-footer {
+  display: flex;
+}
+
+.answer-count,
+.comment-count {
+  color: var(--tertiary-text);
+  font-size: 0.9rem;
+}
+
+.answer-count {
+  margin-right: 1rem;
+}
+
+.view-thread {
+  margin-left: auto;
+}
+
+.view-thread a {
+  color: #809bff;
+  font-size: 0.9rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+@media all and (max-width: 1024px) {
+  iframe {
+    height: auto;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  iframe {
+    height: 400px;
+  }
+
+  .challenge-container,
+  .submission-container,
+  .discussion-area {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+
+  iframe {
+    height: 200px;
+  }
+
+  .challenge-container,
+  .submission-container,
+  .discussion-area,
+  .discussion-header-container {
+    margin: 0 0 0.5rem;
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  .discussion-area {
+    width: 100%;
+  }
+}
