@@ -203,7 +203,7 @@ iframe {
   height: 400px;
 }
 
-.submission-container {
+.challenge-container {
   flex-grow: 1;
 }
 
@@ -334,7 +334,7 @@ iframe {
   }
 }
 
-@media all and (max-width: 1040px) {
+@media all and (max-width: 1060px) {
   .container {
     display: flex;
     flex-direction: column;
