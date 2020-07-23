@@ -357,6 +357,7 @@ iframe {
   }
 }
 
+/* TODO: write code for modal margin landscape view */
 @media all and (max-width: 900px) {
   .modal-content {
     width: 75%;
@@ -403,7 +404,7 @@ iframe {
   }
 
   .container {
-    /* height: 100%; */
+    height: 100%;
     margin: 1rem 0 0;
     width: 100%;
   }
