@@ -323,9 +323,6 @@ iframe {
   iframe {
     height: 395px;
   }
-}
-
-@media all and (max-width: 1280px) {
   .modal-content {
     width: 50%;
     margin: 10% auto;
@@ -335,7 +332,11 @@ iframe {
   }
 }
 
-@media all and (max-width: 1030px) {
+@media all and (max-width: 1045px) {
+  .modal-content {
+    width: 50%;
+    margin: 10% auto;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -362,8 +363,8 @@ iframe {
 /* TODO: write code for modal margin landscape view */
 @media all and (max-width: 900px) {
   .modal-content {
-    width: 75%;
-    margin: 25% auto;
+    width: 65%;
+    margin: 20% auto;
   }
 
   iframe {
