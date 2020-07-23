@@ -80,6 +80,21 @@ const createNewQuestion = () => {
 };
 
 // -------------- Render UI -------------------
+
+const handleSubmitModalTransition = (el1, el2) => {
+  document.getElementById(el1).addEventListener("click", () => {
+    return (el2.innerHTML = `
+        <div class="modal-body" style="height:18rem;padding:2rem 0">
+          <h1 style="margin-top:6rem">Your project has been Submitted!</h1>
+          <p style="padding-top:5px">Look for an email confirmation shortly.</p>
+        </div>
+        <div class="modal-footer">
+						  <button class="close-modal" href="#">Close</button>
+						</div>
+    `);
+  });
+};
+
 renderModalContent = (e) => {
   const modalContent = document.querySelector(".modal-content");
   if (e.target.id === "question-button") {
@@ -99,7 +114,7 @@ renderModalContent = (e) => {
 				  </form>
 			</div>
         `;
-  } else if (e.target.id === "submit-project-button") {
+  } else if (e.target.id === "submit-button") {
     modalContent.innerHTML = `
         <div class="modal-header">
 				  <h1>Submit your Project</h1>
@@ -112,11 +127,14 @@ renderModalContent = (e) => {
 					  <textarea rows="5" placeholder="Comments (optional)"></textarea>
 					  <div class="modal-footer">
 						  <a class="close-modal" href="#">Cancel</a>
-						  <button type="submit">Submit</input>
+						  <button type="submit" id="submit-project-button">Submit</input>
 					  </div>
 				  </form>
 			</div>
         `;
+
+    // Write separatecss, create separate component for this in future
+    handleSubmitModalTransition("submit-project-button", modalContent);
   }
 };
 
