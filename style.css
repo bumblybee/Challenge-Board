@@ -217,6 +217,7 @@ iframe {
   flex-direction: column;
   overflow-y: hidden;
   max-height: 900px;
+  flex-grow: 1;
 }
 
 .discussion-header-container {
@@ -334,10 +335,11 @@ iframe {
   }
 }
 
-@media all and (max-width: 1060px) {
+@media all and (max-width: 1030px) {
   .container {
     display: flex;
     flex-direction: column;
+    width: 80%;
   }
 
   .submission-container,
