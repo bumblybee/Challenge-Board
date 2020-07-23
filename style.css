@@ -338,7 +338,6 @@ iframe {
   .container {
     display: flex;
     flex-direction: column;
-    width: 80%;
   }
 
   .submission-container,
@@ -348,6 +347,7 @@ iframe {
 
   .discussion-area {
     overflow: visible;
+    margin-bottom: 1rem;
   }
 
   .challenge-container,
@@ -374,12 +374,6 @@ iframe {
 
   .questions-container::-webkit-scrollbar {
     width: 0px;
-  }
-}
-
-@media all and (max-width: 725px) {
-  .container {
-    width: 90%;
   }
 }
 
