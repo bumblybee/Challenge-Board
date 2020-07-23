@@ -351,8 +351,7 @@ iframe {
   }
 
   .challenge-container,
-  .submission-container,
-  .discussion-area {
+  .submission-container {
     width: 100%;
     margin-bottom: 1rem;
   }
@@ -371,6 +370,10 @@ iframe {
   .discussion-header-container {
     padding: 3rem 0.5rem 0;
   }
+
+  .questions-container::-webkit-scrollbar {
+    width: 0px;
+  }
 }
 
 @media all and (max-width: 725px) {
@@ -379,7 +382,7 @@ iframe {
   }
 }
 
-@media all and (max-width: 650px) {
+@media all and (max-width: 620px) {
   .modal-content {
     width: 90%;
     margin: 35% auto;
@@ -401,7 +404,8 @@ iframe {
 
   .container {
     /* height: 100%; */
-    margin: 1rem auto 0;
+    margin: 1rem 0 0;
+    width: 100%;
   }
 
   .challenge-submission-area {
@@ -429,10 +433,10 @@ iframe {
     width: 100%;
     height: 100%;
   }
-}
 
-@media all and (max-width: 520px) {
-  .container {
-    width: 100%;
+  @media all and (max-width: 520px) {
+    .container {
+      width: 100%;
+    }
   }
 }
