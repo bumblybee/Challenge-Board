@@ -127,18 +127,20 @@ renderModalContent = (e) => {
 			  </div>
 			  <div class="modal-body">
 				  <form id="submit-form">
-                      <input type="text" placeholder="Github Link">
+                      <input type="text" id="githubLink" placeholder="Github Link">
                       <input type="text" placeholder="Additional Link (optional)">
 					  <textarea rows="5" placeholder="Comments (optional)"></textarea>
 					  <div class="modal-footer">
 						  <a class="close-modal" href="#">Cancel</a>
-						  <button type="submit" id="submit-project-button">Submit</input>
+						  <button type="submit" id="submit-project-button">Submit</button>
 					  </div>
 				  </form>
 			</div>
         `;
 
-    // Write separatecss, create separate component for this in future
+    //TODO: Write separate css, create separate component for this in future
+    //TODO: check input not empty
+
     handleSubmitModalTransition("submit-project-button", modalContent);
   }
 };
