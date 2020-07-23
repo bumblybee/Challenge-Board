@@ -325,10 +325,10 @@ iframe {
   }
 }
 
-@media all and (max-width: 1290px) {
+@media all and (max-width: 1280px) {
   .modal-content {
     width: 50%;
-    margin: 20% auto;
+    margin: 10% auto;
   }
   .container {
     width: 90%;
