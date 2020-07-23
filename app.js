@@ -208,3 +208,7 @@ document.querySelector(".modal").addEventListener("click", (e) => {
   }
   //TODO: Handle project submission
 });
+
+document.querySelector("#user-menu-toggle").addEventListener("click", (e) => {
+  e.target.nextElementSibling.classList.toggle("show");
+});

@@ -153,9 +153,31 @@ i:hover {
   color: var(--secondary-background);
 }
 
-.user-menu {
-  z-index: 10;
+.user-menu-container {
   display: none;
+  background: #18191b;
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  padding: 1rem;
+  width: 12rem;
+}
+
+.show {
+  display: block;
+}
+
+.user-menu li {
+  margin-top: 1rem;
+}
+
+.user-menu hr {
+  margin-top: 1rem;
+}
+
+.user-menu a {
+  text-decoration: none;
+  color: var(--primary-text);
 }
 
 .container {
