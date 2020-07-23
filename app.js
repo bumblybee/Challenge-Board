@@ -75,8 +75,13 @@ const createNewQuestion = () => {
     commentCount: 0,
     threadId: dummyData.threadId(),
   };
-  allQuestions.unshift(newQuestion);
-  renderQuestions(allQuestions);
+
+  if (question !== "") {
+    allQuestions.unshift(newQuestion);
+    renderQuestions(allQuestions);
+  } else {
+    alert("Please enter a question");
+  }
 };
 
 // -------------- Render UI -------------------
